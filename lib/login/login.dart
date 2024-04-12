@@ -7,7 +7,6 @@ import 'sign.dart';
 /**
  * 
  * 
- * 
  */
 class HomeText extends StatelessWidget {
   @override
