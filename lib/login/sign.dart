@@ -3,7 +3,7 @@ import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'sigInlog.dart';
-import 'mainfragment.dart';
+import '/main/mainfragment.dart';
 
 /**
  * 

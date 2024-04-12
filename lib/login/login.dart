@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'mainfragment.dart';
+import '/main/mainfragment.dart';
 import 'sign.dart';
 
 /**
