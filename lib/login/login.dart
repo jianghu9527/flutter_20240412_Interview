@@ -13,7 +13,10 @@ class HomeText extends StatelessWidget {
   Widget build(BuildContext context) {
     // ScreenUtil.instance = ScreenUtil(width: 750, height: 1334)..init(context);
     // ScreenUtil.init(context,width: 750, height: 1334);
-    ScreenUtil.init(context);
+    // ScreenUtil.init(context,width:375,height:667);
+// ScreenUtil.init(context,designSize: Size(750,1334),);
+ScreenUtil.init(context,designSize: Size(375,667),);
+
 
     return Container(
       decoration: BoxDecoration(
