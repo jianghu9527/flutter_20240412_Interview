@@ -1,0 +1,7 @@
+<resources>
+<!--    <string name="app_name">朝天门</string>-->
+    <string name="app_name">楼的话</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_doc_for_leader">DocForLeaderAct</string>
+</resources>
