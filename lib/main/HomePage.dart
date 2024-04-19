@@ -1,7 +1,15 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
+import '../subview/Cropping.dart';
+import '../subview/DebugActivity.dart';
+import '/subview/uitls_row.dart';
 import '/config/path_data.dart';
 import '/subview/util_dio.dart';
 import '/login/login2/login_test01.dart';
+import '../subview/SwitchAndCheckBoxTestRoute .dart';
+
+ 
 
 
 
@@ -124,8 +132,7 @@ void detailMothor(String namemethor, BuildContext context) {
     return;
   }
   print("-----------------点击到详情界面---------------" + namemethor);
-
-
+ 
   switch (namemethor) {
     case "dio网络请求":
       var route = MaterialPageRoute(builder: (context) => util_dio());
@@ -136,6 +143,45 @@ void detailMothor(String namemethor, BuildContext context) {
       var route = MaterialPageRoute(builder: (context) => login_test01());
       Navigator.push(context, route);
       break;
+     case path_row:
+         var route = MaterialPageRoute(builder: (context) => UtilsRow());
+      Navigator.push(context, route);
+     break; 
+     case  path_SingleChildScrollView:
+        print("-----------------SingleChildScrollView-------------");
+    var route = MaterialPageRoute(builder: (context) => SingleChildScrollView());
+      Navigator.push(context, route);
+         break; 
+        case path_caijian://裁剪
+      print("-----------------裁剪---------Cropping----");
+
+    var route = MaterialPageRoute(builder: (context) => Cropping(),);
+      Navigator.push(context, route,);
+
+      break;
+
+    case path_debugActivity://debugactivity
+      print("-----------------调试界面---------debugactivity----");
+
+      var route = MaterialPageRoute(builder: (context) => DebugActivity(),);
+      Navigator.push(context, route,);
+
+      break;
+    case path_Switch_check://debugactivity
+      print("-----------------单选开关和复选框-------------");
+
+      var route = MaterialPageRoute(builder: (context) => SwitchAndCheckBoxTestRouteActivity(),);
+      Navigator.push(context, route,);
+
+      break;
+
+
+   default:
+   print("-----------------没有匹配的数据-------------");
+
+   break;
+          
+   
 
 
   }

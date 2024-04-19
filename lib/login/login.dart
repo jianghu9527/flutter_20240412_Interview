@@ -67,7 +67,10 @@ class _Login extends State<HomeText_name> {
       loginForm.save();
       print('---------------userName: ' + userName + ' password: ' + password);
       // var  route=      MaterialPageRoute(builder: (context) =>   mainfragment()); //skipstate    mainfragment
-      var route = MaterialPageRoute(builder: (context) => SignInPage());
+
+
+      // var route = MaterialPageRoute(builder: (context) => SignInPage());
+      var route = MaterialPageRoute(builder: (context) => mainfragment());
       Navigator.push(context, route);
     }
   }
@@ -147,9 +150,9 @@ class _Login extends State<HomeText_name> {
                         },
                         validator: (phone) {
                         print("-----------phone:$phone");
-                          if(phone!.length == 0){
-                            return '手机号码不能为空';
-                          } 
+                          // if(phone!.length == 0){
+                          //   return '手机号码不能为空';
+                          // } 
                           
                           return null;
                         },
@@ -186,9 +189,15 @@ class _Login extends State<HomeText_name> {
                           password = value!;
                         },
                         validator: (value) {
-                          if(value!.length !=6){
-                            return '请输入6位密码';
+                          // if(value!.length !=6){
+                          //   return '请输入6位密码';
+                          // }
+
+                               if(value!.length == 0){
+                            return '密码不能位空';
                           }
+
+
                           return null;
                         },
                       ),

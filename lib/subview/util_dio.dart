@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_20240407_code_wall/utils/HttpUtil.dart';
 import 'package:http/http.dart' as http;
 
 class util_dio extends StatefulWidget {
@@ -28,6 +29,19 @@ class _util_dioState extends State<util_dio> {
                   print("---------Dio请求--dataes--2-" + _dataes.toString());
                 });
        
+  }
+
+
+  @override
+  void initState() {
+    super.initState();
+    HttpUtil.getHttp(url:"https://jsonplaceholder.typicode.com/posts/1",onCallBack: (vlan){
+
+      print("----------------封装的网络请求数据-------------${vlan}");
+
+    });
+
+
   }
 
   Future<void> _fetchData() async {
