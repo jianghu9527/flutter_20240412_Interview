@@ -1,8 +1,13 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
+import '../subview/CardWidget.dart';
 import '../subview/Cropping.dart';
 import '../subview/DebugActivity.dart';
+import '../subview/Nagaland.dart';
+import '../subview/Poitionwidget.dart';
+import '../subview/StackView.dart';
+import '../subview/listviewview.dart';
 import '/subview/uitls_row.dart';
 import '/config/path_data.dart';
 import '/subview/util_dio.dart';
@@ -174,6 +179,40 @@ void detailMothor(String namemethor, BuildContext context) {
       Navigator.push(context, route,);
 
       break;
+    case path_Nagaland://纳格兰项目
+      print("-----------------纳格兰项目-------------");
+
+      var route = MaterialPageRoute(builder: (context) => Nagaland(),);
+      Navigator.push(context, route,);
+
+      break;
+    case path_Stack://层叠布局
+      print("-----------------层叠布局-------------");
+      var route = MaterialPageRoute(builder: (context) => StackView(),);
+      Navigator.push(context, route,);
+      break;
+    case path_postitionedWidget://postitionedWidget层叠布局
+      print("----------------postitionedWidget-层叠布局-------------");
+      var route = MaterialPageRoute(builder: (context) => Poitionwidget(),);
+      Navigator.push(context, route,);
+      break;
+    case path_CardWidget://CardWidget卡片
+      print("----------------CardWidget卡片--------------");
+      var route = MaterialPageRoute(builder: (context) => CardWidget(),);
+      Navigator.push(context, route,);
+      break;
+
+
+    case path_mlistview://list列表
+      print("-----------------list列表-------------");
+
+      var route = MaterialPageRoute(builder: (context) => listviewview(),);
+      Navigator.push(context, route,);
+
+      break;
+
+
+
 
 
    default:

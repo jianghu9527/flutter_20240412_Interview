@@ -29,26 +29,39 @@ class _MsgPageState extends State<MsgPage> {
         leading: null,
       ),
       body: ListView.builder(
-          itemCount: 20, // 列表项的数量
-          itemBuilder: (context, index) {
-            return ListTile(
-              
+        itemCount: 20, // 列表项的数量
+        itemBuilder: (context, index) {
+          return Column(children: <Widget>[
+            ListTile(
               leading: Icon(Icons.star), // 列表项前面的图标
-              title: Text('Item $index',style: TextStyle(   color: Color.fromARGB(255, 33, 218, 27),)), // 列表项的标题
-              subtitle: Text('这是第 $index 个项目',style: TextStyle(   color: Color.fromARGB(255, 240, 243, 240),),), // 列表项的副标题
+              title: Text('Item $index',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 33, 218, 27),
+                  )), // 列表项的标题
+              subtitle: Text(
+                '这是第 $index 个项目',
+                style: TextStyle(
+                  color: Color.fromARGB(255, 240, 243, 240),
+                ),
+              ), // 列表项的副标题
               onTap: () {
                 // 当用户点击列表项时触发的操作
                 print('----------------------点击了第 $index 个项目');
               },
-            );
-          },
-        ),
+            ),
+            Divider(
+              height: 1,
+              thickness: 1,
+              color: Colors.grey[300],
+            ),
+          ]);
+          // Divider(),
+        },
+      ),
 
-
-
-      // 
-      // 
-      // 
+      //
+      //
+      //
       // Column(
       //   children: [
       //     Flexible(

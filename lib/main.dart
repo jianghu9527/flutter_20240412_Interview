@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 // import 'package:flutter/widgets.dart';
 
 import 'login/login.dart';
+import 'subview/nagaland/nagaland_main.dart';
 
 
 
@@ -18,6 +19,12 @@ class MyAppLogin extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: const Color.fromARGB(131, 131, 131, 1)),
       home: HomeText(),
+    // RoutSelect(),
+          routes:{
+        "Main_nagaland": (context) => nagalandMain(),
+        // "GesturePage":(context)=>GesturePage(),
+
+      } ,
       
       // home: Scaffold(appBar:AppBar(title: Text("你好flutter"),
       // ),
@@ -69,4 +76,16 @@ class MyAppLogin extends StatelessWidget {
       //      }
     );
   }
+
+
+  // Widget  RoutSelect(){
+
+  //    return  routes:{
+  //       "ProductDetail": (context) => ProductDetail(),
+  //       // "GesturePage":(context)=>GesturePage(),
+
+  //     };
+
+
+  // }
 }
