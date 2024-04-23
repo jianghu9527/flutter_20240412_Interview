@@ -1,4 +1,4 @@
-import 'dart:html';
+// import 'dart:html';
 
 import 'package:flutter/material.dart';
 import '../subview/CardWidget.dart';
@@ -201,20 +201,14 @@ void detailMothor(String namemethor, BuildContext context) {
       var route = MaterialPageRoute(builder: (context) => CardWidget(),);
       Navigator.push(context, route,);
       break;
-
-
+ 
     case path_mlistview://list列表
-      print("-----------------list列表-------------");
-
+      print("-----------------list列表-------------"); 
       var route = MaterialPageRoute(builder: (context) => listviewview(),);
       Navigator.push(context, route,);
 
       break;
-
-
-
-
-
+  
    default:
    print("-----------------没有匹配的数据-------------");
 
