@@ -65,14 +65,29 @@ class SignInPage extends StatelessWidget {
                 height: 45.0,
                 child: FilledButton(
                     onPressed: () {
-                      print("-----------输入手机号码---------提交----222------");
+                      print("-----------输入手机号码---------关闭当前界面----222------");
 
                   // siginlogin();
 
 
- var route = MaterialPageRoute(builder: (context) => mainfragment());
-      Navigator.push(context, route);
+          Navigator.of(context).pop();
+          // Navigator.of(context).popUntil((route) => route.isFirst);
+ 
 
+                      // Navigator.push(context, route)
+                      // SnackBar(content: content)
+
+// showDialog(context: context, builder: builder)
+                      // AlertDialog(
+                      //   title: Text("提示"),
+                      //   content: Text("即将进入主界面"),
+                      //   actions: <Widget>[
+                      //     FloatingActionButton(
+                      //       onPressed: () {
+
+//  var route = MaterialPageRoute(builder: (context) => mainfragment());
+//       Navigator.push(context, route);
+               
 
 
                       // Navigator.push(context, route)

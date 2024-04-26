@@ -19,6 +19,7 @@ ScreenUtil.init(context,designSize: Size(375,667),);
 
 
     return Container(
+      
       decoration: BoxDecoration(
           image: DecorationImage(
         image: NetworkImage(
@@ -33,6 +34,7 @@ ScreenUtil.init(context,designSize: Size(375,667),);
 
       child: Container(
         child: HomeText_name(),
+ 
 
         // color: Colors.red.withOpacity(.5),
         // child: Center(
@@ -59,6 +61,7 @@ class _Login extends State<HomeText_name> {
   bool isShowPassWord = false;
 
   void login() {
+    debugPrint("-------------HomeText--------login-------");
     //读取当前的Form状态
     var loginForm = loginKey.currentState;
     //验证Form表单

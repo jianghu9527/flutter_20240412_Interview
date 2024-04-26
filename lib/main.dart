@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 // import 'package:flutter/widgets.dart';
 
 import 'login/login.dart';
@@ -10,8 +11,12 @@ import 'subview/nagaland/nagaland_main.dart';
 void main() {
   runApp(  MyAppLogin());
 }
+
+
 class MyAppLogin extends StatelessWidget {
   var ides = "5";
+ 
+ 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,6 +24,7 @@ class MyAppLogin extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: const Color.fromARGB(131, 131, 131, 1)),
       home: HomeText(),
+      
     // RoutSelect(),
           routes:{
         "Main_nagaland": (context) => nagalandMain(),

@@ -1,0 +1,5 @@
+打包输出路径：
+Built build\app\outputs\apk\release\app-release.apk
+Built build\app\outputs\flutter-apk\app-release.apk (34.3MB).
+安装路径：
+adb install  D:\android_dart\dart_code\flutter_20240407_code\flutter_application_1\git_flutter_code\flutter_20240412_Interview\build\app\outputs\flutter-apk\app-release.apk
