@@ -39,18 +39,10 @@ class _DataSqliterState extends State<DataSqliter> {
           ),
            ElevatedButton(onPressed: (){
             print("----------------数据库的存取------------------");
-
- 
-
             // SqliterAbouts().
                 //  insertDog(),
                 // SqliterAbout.name
-
            }, child: Text("数据库的存取",style: TextStyle(fontSize:20,color: Colors.green),)),
-
-
-
-
         ],
       ),
     );

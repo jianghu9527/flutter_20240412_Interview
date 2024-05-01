@@ -4,26 +4,29 @@ import 'package:fluttertoast/fluttertoast.dart';
 
 import 'login/login.dart';
 import 'subview/nagaland/nagaland_main.dart';
+import 'subview/rtc/RTC_main.dart';
+import 'subview/rtc/lanch_RTC.dart';
 
 
 
 
 void main() {
-  runApp(  MyAppLogin());
+  runApp(  MyAppLogin());  
+    // runApp(RTC_main());
 }
 
 
 class MyAppLogin extends StatelessWidget {
   var ides = "5";
  
- 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "fultter test ",
+      title: "fultter启动 ",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: const Color.fromARGB(131, 131, 131, 1)),
       home: HomeText(),
+      // home: LanchRTC(),
       
     // RoutSelect(),
           routes:{
@@ -32,21 +35,11 @@ class MyAppLogin extends StatelessWidget {
 
       } ,
       
-      // home: Scaffold(appBar:AppBar(title: Text("你好flutter"),
-      // ),
-      // body: Center(child: Text("你好flutter",
-      // textDirection: TextDirection.ltr,
-      // style: TextStyle(color: Color.fromARGB(244, 244, 124, 1),
-      // fontSize: 50
+ 
 
-      // ),
-      // ),),
-      // ),
+ 
 
-      // routes: {
-      //   "ProductDetail": (context) => ProductDetail(),
-      //   "GesturePage": (context) => GesturePage(),
-      // },
+  
 
       //  routes: {
       //   "home": (context) => HomeText(),
@@ -84,14 +77,6 @@ class MyAppLogin extends StatelessWidget {
   }
 
 
-  // Widget  RoutSelect(){
 
-  //    return  routes:{
-  //       "ProductDetail": (context) => ProductDetail(),
-  //       // "GesturePage":(context)=>GesturePage(),
-
-  //     };
-
-
-  // }
+ 
 }

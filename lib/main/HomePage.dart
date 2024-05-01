@@ -3,17 +3,27 @@
 import 'package:flutter/material.dart';
  
 import '../login/sign.dart';
+import '../subview/AlignView.dart';
 import '../subview/CardWidget.dart';
 import '../subview/Cropping.dart';
 import '../subview/DataSave.dart';
 import '../subview/DataSqliter.dart';
 import '../subview/DebugActivity.dart';
+import '../subview/ExpandedView.dart';
+import '../subview/MaterialAppView.dart';
+import '../subview/MobxUtils.dart';
 import '../subview/Nagaland.dart';
 import '../subview/Poitionwidget.dart';
 import '../subview/StackView.dart';
+import '../subview/TextFieldView.dart';
 import '../subview/WrapFlow.dart';
+import '../subview/getxUtils.dart';
+import '../subview/lifecycle.dart';
 import '../subview/listviewview.dart';
 import '../subview/TanChuang.dart';
+import '../subview/persionalInfor.dart';
+import '../subview/rtc/RTC_main.dart';
+import '../subview/showDialog.dart';
 import '../subview/viewpage/PageViewPage.dart';
 import '../subview/viewpage/PageViewPage_pic.dart';
 import '/subview/uitls_row.dart';
@@ -58,10 +68,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    // return Container(child:Text("HomePage"));
-    // return ListView(
-    //   children: _initListView(),
-    // );
+ 
 
     return MaterialApp( 
       debugShowCheckedModeBanner: false, 
@@ -120,29 +127,7 @@ class _HomePageState extends State<HomePage> {
   }
  
  
-
-// ListView.builder(
-//         itemCount: _initListViewString().length,
-//         itemBuilder: (BuildContext context, int index) {
-//              leading: Image.network( "https://images.pexels.com/photos/850359/pexels-photo-850359.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=375",
-//              scale: 1.0,fit: BoxFit.cover,
-//              errorBuilder: (ctx,stack,stacktrace)=>Image.asset("assets/images/feed/feed2_image1.png"),);
-//             title: Text("String:"+_initListViewString()[index]);
-//             subtitle: Text("author");
-
-//         }
-// ),
-
-// ListTile(
-//           //   // leading: Image.network( "https://www.itying.com/images/flutter/7.png",scale: 1.0,fit: BoxFit.cover,
-//           //   // errorBuilder: (ctx,stack,stacktrace)=>Image.asset("assets/images/feed/feed2_image1.png"),),
-//           //   //,repeat: ImageRepeat.repeatX,  ,height: 150,width: 150
-//              leading: Image.network( "https://images.pexels.com/photos/850359/pexels-photo-850359.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=375",scale: 1.0,fit: BoxFit.cover,
-//              errorBuilder: (ctx,stack,stacktrace)=>Image.asset("assets/images/feed/feed2_image1.png"),),
-//               title: Text("String:"+_initListViewString()[index]),
-//              subtitle: Text("author"),
-
-//          ),
+ 
  
 }
 
@@ -173,16 +158,74 @@ void detailMothor(String namemethor, BuildContext context) {
       break;
  case path_getx: 
        debugPrint("-----------------getx---------"); 
-      var route = MaterialPageRoute(builder: (context) => SignInPage()); 
-      Navigator.push(context, route);
-      break;
-       case path_toast: 
-          debugPrint("-----------------path_toast----弹唱-----"); 
-      var route = MaterialPageRoute(builder: (context) =>TanChuang()); 
+      var route = MaterialPageRoute(builder: (context) => GetxUtils()); 
       Navigator.push(context, route);
       break;
 
-case path_Wrap_Flow:// 
+ case path_Align: 
+       debugPrint("-----------------Align---------"); 
+      var route = MaterialPageRoute(builder: (context) => AlignView()); 
+      Navigator.push(context, route);
+      break;
+
+      
+ case path_mobx: 
+       debugPrint("-----------------path_mobx---------"); 
+      var route = MaterialPageRoute(builder: (context) => MobxUtils()); 
+      Navigator.push(context, route);
+      break;
+ case path_rtc: 
+       debugPrint("-----------------rtc---------"); 
+      var route = MaterialPageRoute(builder: (context) => RTC_main()); 
+      Navigator.push(context, route);
+      break; 
+  case path_toast: 
+          debugPrint("-----------------path_toast----弹唱-----"); 
+      // var route = MaterialPageRoute(builder: (context) =>TanChuang()); 
+      // Navigator.push(context, route);
+         Navigator.pushReplacement( context, MaterialPageRoute(builder: (context) => TanChuang()));
+
+  case path_lifecycle: 
+          debugPrint("-----------------生命周期---------"); 
+      // var route = MaterialPageRoute(builder: (context) =>TanChuang()); 
+      // Navigator.push(context, route);
+         Navigator.pushReplacement( context, MaterialPageRoute(builder: (context) => lifecycle()));
+
+
+
+
+      break;
+  case path_Expanded: 
+      debugPrint("-----------------path_Expanded---------"); 
+      var route = MaterialPageRoute(builder: (context) =>ExpandedView()); 
+      Navigator.push(context, route);
+      break; 
+  case path_persional: 
+      debugPrint("-----------------path_persional------个人中心------"); 
+      var route = MaterialPageRoute(builder: (context) =>persionalInfor()); 
+      Navigator.push(context, route);
+      break;
+  case path_TextField: 
+      debugPrint("-----------------TextField------------"); 
+      var route = MaterialPageRoute(builder: (context) =>TextFieldView()); 
+      Navigator.push(context, route);
+      break;
+
+  case path_showDialog: 
+      debugPrint("-----------------path_showDialog------------"); 
+      var route = MaterialPageRoute(builder: (context) =>showDialogView()); 
+      Navigator.push(context, route);
+      break;
+      
+      
+  case path_MaterialApp: 
+      debugPrint("-----------------MaterialAppView------------"); 
+      var route = MaterialPageRoute(builder: (context) =>MaterialAppView()); 
+      Navigator.push(context, route);
+      break;
+      
+
+  case path_Wrap_Flow:// 
          debugPrint("-----------------流式布局---------"); 
    var route = MaterialPageRoute(builder: (context) => WrapFlow()); 
       Navigator.push(context, route);
