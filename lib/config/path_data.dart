@@ -25,10 +25,12 @@ const String path_rtc = "rtc";
 const String path_toast = "多种弹窗_snackbar_defaultDilog_bottomSheet";
 const String path_Expanded = "Expanded";
 const String path_lifecycle= "生命周期";
+const String path_setting= "获取本地设置(本地照片)";
 const String path_persional = "个人中心";
 const String path_TextField = "TextField";
 const String path_showDialog = "showDialog";
-
+const String path_DraggableScrollableSheet = "DraggableScrollableSheet—抽屉效果";
+  
 const String path_MaterialApp = "MaterialApp以及Container属性介绍";
 
 
@@ -36,8 +38,10 @@ const List<String> path_name = [
   path_Nagaland,
   path_Stack,
   path_Align,
+  path_setting,
   path_MaterialApp,
   path_TextField,
+  path_DraggableScrollableSheet,
   path_showDialog,
   path_viewpage,
   path_rtc,

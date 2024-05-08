@@ -9,11 +9,13 @@ import '../subview/Cropping.dart';
 import '../subview/DataSave.dart';
 import '../subview/DataSqliter.dart';
 import '../subview/DebugActivity.dart';
+import '../subview/DraggableScrollableSheetView.dart';
 import '../subview/ExpandedView.dart';
 import '../subview/MaterialAppView.dart';
 import '../subview/MobxUtils.dart';
 import '../subview/Nagaland.dart';
 import '../subview/Poitionwidget.dart';
+import '../subview/SettingView.dart';
 import '../subview/StackView.dart';
 import '../subview/TextFieldView.dart';
 import '../subview/WrapFlow.dart';
@@ -167,7 +169,11 @@ void detailMothor(String namemethor, BuildContext context) {
       var route = MaterialPageRoute(builder: (context) => AlignView()); 
       Navigator.push(context, route);
       break;
-
+ case path_DraggableScrollableSheet: 
+       debugPrint("-----------------path_DraggableScrollableSheet---------"); 
+      var route = MaterialPageRoute(builder: (context) => DraggableScrollableSheetView()); 
+      Navigator.push(context, route);
+      break;
       
  case path_mobx: 
        debugPrint("-----------------path_mobx---------"); 
@@ -191,9 +197,11 @@ void detailMothor(String namemethor, BuildContext context) {
       // Navigator.push(context, route);
          Navigator.pushReplacement( context, MaterialPageRoute(builder: (context) => lifecycle()));
 
-
-
-
+     case  path_setting:
+                  debugPrint("-----------------设置手机---------"); 
+         Navigator.pushReplacement( context, MaterialPageRoute(builder: (context) => SettingView()));
+     break;
+ 
       break;
   case path_Expanded: 
       debugPrint("-----------------path_Expanded---------"); 
