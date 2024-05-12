@@ -5,9 +5,9 @@ import 'package:permission_handler/permission_handler.dart';
 // import 'package:agora_rtc_engine_example/components/android_foreground_service_widget.dart';
 // import 'package:agora_rtc_engine_example/components/config_override.dart';
 
-import 'package:agora_rtc_engine/agora_rtc_engine.dart';
+// import 'package:agora_rtc_engine/agora_rtc_engine.dart';
 
-import 'join_channel_video/join_channel_video.dart';
+// import 'join_channel_video/join_channel_video.dart';
  
 
 /**
@@ -70,8 +70,8 @@ class _RTC_mainState extends State<RTC_main> {
             TextButton(onPressed: (){
               print("---------开始----视频通话---------------");
  
-      var route = MaterialPageRoute(builder: (context) => JoinChannelVideo()); 
-      Navigator.push(context, route);
+      // var route = MaterialPageRoute(builder: (context) => JoinChannelVideo()); 
+      // Navigator.push(context, route);
 
 	// Navigator.push(
   //           context,

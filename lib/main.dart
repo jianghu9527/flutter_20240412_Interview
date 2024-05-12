@@ -34,12 +34,7 @@ class MyAppLogin extends StatelessWidget {
         // "GesturePage":(context)=>GesturePage(),
 
       } ,
-      
- 
-
- 
-
-  
+       
 
       //  routes: {
       //   "home": (context) => HomeText(),

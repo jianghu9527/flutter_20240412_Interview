@@ -185,6 +185,21 @@ child: ListView(
 
 
 
+Column(
+  children: [
+
+
+
+    _myListTile("意见反馈"),
+    _myListTile("关于我们"),
+    _myListTile("联系我们"),
+    _myListTile("设置"),
+    _myListTile("退出登录"),
+
+
+  ],
+)
+
 
   ],
 
@@ -195,3 +210,24 @@ child: ListView(
 );
   }
 }
+
+
+
+
+  Widget _myListTile(String title){
+
+    return Container(
+       decoration: BoxDecoration(
+        color: Colors.white,
+        border: Border(
+          bottom:BorderSide(width: 1,color:Colors.black12)
+        )
+      ),
+      child: ListTile(
+        leading: Icon(Icons.blur_circular),
+        title: Text(title),
+        trailing: Icon(Icons.arrow_right),
+      ),
+    );
+  }
+

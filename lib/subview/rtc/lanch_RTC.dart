@@ -12,7 +12,7 @@ import 'RTC_main.dart';
 import 'agora.config.dart';
 import 'config_override.dart';
 import 'index.dart';
-import 'join_channel_video/join_channel_video.dart';
+// import 'join_channel_video/join_channel_video.dart';
 
 
 /**
@@ -41,12 +41,12 @@ class _LanchRTCState extends State<LanchRTC> {
 
 
 
-final basic = [
-  {'name': 'Basic'},
-  // {'name': 'JoinChannelAudio', 'widget': const JoinChannelAudio()},
-  {'name': 'JoinChannelVideo', 'widget': const JoinChannelVideo()},
-  // {'name': 'StringUid', 'widget': const StringUid()}
-];
+// final basic = [
+//   {'name': 'Basic'},
+//   // {'name': 'JoinChannelAudio', 'widget': const JoinChannelAudio()},
+//   {'name': 'JoinChannelVideo', 'widget': const JoinChannelVideo()},
+//   // {'name': 'StringUid', 'widget': const StringUid()}
+// ];
 
 const bool kIsWeb = bool.fromEnvironment('dart.library.js_util');
 class MyApp extends StatefulWidget {
