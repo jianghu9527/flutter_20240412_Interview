@@ -6,6 +6,8 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_20240407_code_wall/subview/User.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
+
+import 'mlist/ProductListScreen.dart';
  
 
 
@@ -52,6 +54,19 @@ class _NetworkFrameState extends State<NetworkFrame> {
         OutlinedButton(onPressed: (){ 
              UserParen();
         print("----------------解析json-----------------"); 
+        }, child: Text("解析json")),
+
+   SizedBox(height: 100,),
+
+   
+        OutlinedButton(onPressed: (){ 
+     
+        print("----------------解析json-----------------"); 
+
+                      var route = MaterialPageRoute(builder: (context) => ProductListScreen());
+                        Navigator.push(context, route); 
+
+
         }, child: Text("解析json")),
 
 

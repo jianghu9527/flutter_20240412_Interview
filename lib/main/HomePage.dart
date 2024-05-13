@@ -1,4 +1,4 @@
-// import 'dart:html';
+
 
 import 'package:flutter/material.dart';
 
@@ -95,7 +95,7 @@ class _HomePageState extends State<HomePage> {
               itemCount: _initListViewString().length,
               itemBuilder: (BuildContext context, int index) {
                 Color? backgroundColor =
-                    index % 2 == 0 ? Color.fromARGB(232, 237, 240, 243) : const Color.fromARGB(255, 208, 209, 209);
+                    index % 2 == 0 ? Color.fromARGB(232, 237, 240, 243) : Color.fromARGB(255, 240, 241, 241);
 
                 return Column(
                   children: <Widget>[

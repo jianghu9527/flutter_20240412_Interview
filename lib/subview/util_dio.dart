@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_20240407_code_wall/utils/HttpUtil.dart';
 import 'package:http/http.dart' as http;
 
+import 'mlist/ProductListScreen.dart';
+
 class util_dio extends StatefulWidget {
   const util_dio({super.key});
 
@@ -108,18 +110,9 @@ class _util_dioState extends State<util_dio> {
               style: ButtonStyle(
                   backgroundColor:
                       MaterialStateProperty.all<Color>(Colors.black)),
-              // padding:EdgeInsets.symmetric(vertical: 10,horizontal: 20),
-              // // Padding.all(50)
+          
 
-              // style: TextButton.styleFrom(
-              //   foregroundColor: Colors.white, backgroundColor: Colors.teal,
-              //   shape: RoundedRectangleBorder(
-              //     borderRadius: BorderRadius.circular(10)
-              //   )
-              // ),
-
-              onPressed: () async {
-
+              onPressed: () async { 
                 sendData("");
                 // print("-----------------------Dio请求----------999-----");
                 // Response onee = await Dio()
@@ -157,6 +150,23 @@ class _util_dioState extends State<util_dio> {
 
             SizedBox(height: 20,), 
             Text("服务区返回的数据："+_dataes),
+
+            SizedBox(height: 20,), 
+
+            ElevatedButton(onPressed: (){ 
+                  var route = MaterialPageRoute(builder: (context) => ProductListScreen());
+                        Navigator.push(context, route); 
+
+            }, child: Text("跳转列表界面")),
+              SizedBox(height: 20,), 
+
+            ElevatedButton(onPressed: (){ 
+                  // var route = MaterialPageRoute(builder: (context) => ProductListScreen());
+                  //       Navigator.push(context, route); 
+
+            }, child: Text("网络请求模块")),
+
+
           ]),
         ),
       ),
