@@ -118,7 +118,10 @@ class _MemberPageState extends State<MemberPage> {
   
  Widget _orderType() {
  
-return Container(
+return Column(
+
+  children: [
+Container(
 margin: EdgeInsets.only(top:5),
 width: ScreenUtil().setWidth(750),
  
@@ -185,11 +188,18 @@ child: ListView(
 
 
 
-Column(
+
+
+  ],
+
+),
+ 
+),
+
+  Column(
+
   children: [
-
-
-
+ 
     _myListTile("意见反馈"),
     _myListTile("关于我们"),
     _myListTile("联系我们"),
@@ -203,7 +213,12 @@ Column(
 
   ],
 
-),
+
+
+ 
+
+
+
 
 
 
