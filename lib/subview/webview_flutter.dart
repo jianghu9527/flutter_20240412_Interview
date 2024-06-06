@@ -20,22 +20,18 @@ class WebViewflutter extends StatelessWidget  {
 @override
 void initState() {
 
- controller  
-      ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..addJavaScriptChannel('Report', onMessageReceived: (message) {
-       
-      })
-      ..loadHtmlString(Autog.seturl!);
 
-      
+    print("----------------------1---------addressuri:${Autog.seturl!}");
+
+ 
  
 }
 
   @override
   Widget build(BuildContext context) {
 
-     var  addressuri=Autog.seturl;
-    print("----------------------addressuri:${addressuri}---------");
+       var  addressuri=Autog.seturl;
+    print("---------------------2----------addressuri:${addressuri}");
 
 //  var   controller = WebViewController()
 //   // ..setJavaScriptMode(JavaScriptMode.unrestricted)
@@ -67,26 +63,37 @@ void initState() {
     // );
 
 
+ controller  
+      ..setJavaScriptMode(JavaScriptMode.unrestricted)
+      ..loadRequest(Uri.parse(Autog.seturl!))
+      ..addJavaScriptChannel('Report', onMessageReceived: (message) {
+       
+      })
+      ..loadHtmlString(Autog.seturl!);
+
+
 
  if (WebViewPlatform.instance != null) {
 
       return     Scaffold(
         appBar: AppBar(),
-         body: Column(
+        // body:WebView
+        body: WebViewWidget(controller: controller),
+      //    body: Column(
 
-           children: [
-        SizedBox(height: MediaQuery.of(context).size.height, child: WebViewWidget(controller: controller)),
+      //      children: [
+      //   SizedBox(height: MediaQuery.of(context).size.height, child: WebViewWidget(controller: controller)),
        
-      ],
+      // ],
  
     
-      ),
+      // ),
       );
 
  }else{
 
 return Center(
-  child: Text("WebView not supported"),
+  child: Text("WebView not supported",style: TextStyle(color: Colors.red),),
 );
 
 

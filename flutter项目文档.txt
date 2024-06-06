@@ -3,3 +3,15 @@ Built build\app\outputs\apk\release\app-release.apk
 Built build\app\outputs\flutter-apk\app-release.apk (34.3MB).
 安装路径：
 adb install  D:\android_dart\dart_code\flutter_20240407_code\flutter_application_1\git_flutter_code\flutter_20240412_Interview\build\app\outputs\flutter-apk\app-release.apk
+
+
+flutter pub get  //获取依赖包：
+flutter build apk//
+flutter run
+flutter install //
+flutter clean //清理依赖清理项目
+flutter create  //创建项目
+flutter build appbuildle  编译aab
+flutter build ios/web/windows/macos/linux      编译 Android APK
+
+flutter pub upgrade   升级依赖包：

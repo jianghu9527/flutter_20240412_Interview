@@ -110,7 +110,7 @@ class _HomePageState extends State<HomePage> {
                                 textColor: Colors.black87,
                                 //  backgroundColor: Color.fromARGB(1, 5, 247, 38),
                                 leading: Image.asset(
-                                    "images/signup/signup_page_9_profile.png"),
+                                    "assets/images/signup/signup_page_9_profile.png"),
                                 title: Text(
                                   "" + _initListViewString()[index],
                                   style: TextStyle(

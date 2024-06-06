@@ -63,7 +63,7 @@ class _listviewJsonState extends State<listviewJson> {
   Future<void> fetchDataFromApi() async {
     try {
       final response = await http.get(Uri.parse(
-              'https://3g.163.com/photocenter/api/list/0001/00AP0001,3R710001,4T8E0001/30/3.json')
+              'https://3g.163.com/photocenter/api/list/0001/00AP0001,3R710001,4T8E0001/30/30.json')
           // ,headers:{"Content-Type": "application/json"}
           );
       print(
