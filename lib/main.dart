@@ -24,7 +24,7 @@ class MyAppLogin extends StatelessWidget {
     return MaterialApp(
       title: "fultter启动 ",
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primaryColor: const Color.fromARGB(131, 131, 131, 1)),
+      theme: ThemeData(primaryColor: Color.fromARGB(28, 131, 131, 1)),
       home: HomeText(),
       // home: LanchRTC(),
       

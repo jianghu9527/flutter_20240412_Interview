@@ -329,7 +329,7 @@ void detailMothor(String namemethor, BuildContext context) {
       Navigator.push(context, route);
       break;
     case path_caijian: //裁剪
-      print("-----------------裁剪---------Cropping----");
+      print("-----------------裁剪----------------Navigator.push 内含一个对象------MaterialPageRoute-------------Cropping----");
 
       var route = MaterialPageRoute(
         builder: (context) => Cropping(),

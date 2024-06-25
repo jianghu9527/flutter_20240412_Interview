@@ -7,7 +7,7 @@ const String path_form = "form表单";
 const String path_dio = "dio网络请求";
  const String path_document = "文档";
 
-const String path_caijian = "裁剪";
+const String path_caijian = "裁剪__MaterialPageRoute 界面跳转";
 const String path_debugActivity = "debugActivity";
 const String path_Switch_check = "单选开关和复选框";
 const String path_Nagaland = "纳格兰项目";
